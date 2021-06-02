@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import GoogleMap from './components/GoogleMap';
+import SearchInput from './components/SearchInput';
+import Detail from './components/Detail';
+import React, { useState } from 'react';
 
-function App() {
+function App(props) {
+
+  const [value, setValue] = useState(0); // integer state
+  console.log(`rendering whole App with value=${value}`);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width:"100%",position:"relative"}}>
+     <div style={{witdh:"70%",float:"left"}}> 
+	<SearchInput refreshParent={setValue} style={{width:"100%",backgroundColor:"red"}}/>
+    	<GoogleMap markers={props.markers}  center={props.center} refreshParent={setValue} height={props.height} apikey={props.apikey?props.apikey:""}/>
+     </div>
+     <div className="Detail" style={{width:"30%", height:`${props.height}`, float:"right"}}> 
+    	<Detail />
+     </div>
+    </div>
     </div>
   );
 }
