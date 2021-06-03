@@ -7,7 +7,7 @@
     "url": "git+https://github.com/roclas/reactMaps.git"
   },
   "publishConfig": {
-     "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
