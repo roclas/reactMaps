@@ -21,9 +21,15 @@
     "react-sliding-side-panel": "^2.0.3",
     "web-vitals": "^1.0.1"
   },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "babel-preset-react-app": "^10.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "buildJS": "NODE_ENV=production babel src --out-dir lib",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -32,6 +38,9 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "babel": {
+    "presets": ["babel-preset-react-app"]
   },
   "browserslist": {
     "production": [
