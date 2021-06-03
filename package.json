@@ -6,7 +6,11 @@
     "type": "git",
     "url": "git+https://github.com/roclas/reactMaps.git"
   },
-  "main": "index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "main": "lib/index.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -21,17 +25,27 @@
     "react-sliding-side-panel": "^2.0.3",
     "web-vitals": "^1.0.1"
   },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "babel-preset-react-app": "^10.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "buildJS": "NODE_ENV=production babel src --out-dir lib",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prePublishOnly": "npm run buildJS"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "babel": {
+    "presets": ["babel-preset-react-app"]
   },
   "browserslist": {
     "production": [
