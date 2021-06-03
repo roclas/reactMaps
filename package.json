@@ -1,11 +1,12 @@
 {
   "name": "roclasreactmap",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/roclas/reactMaps.git"
   },
+  "main": "index.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
