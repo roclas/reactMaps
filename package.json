@@ -6,7 +6,11 @@
     "type": "git",
     "url": "git+https://github.com/roclas/reactMaps.git"
   },
-  "main": "index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "main": "lib/index.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
